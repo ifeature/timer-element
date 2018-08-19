@@ -1,0 +1,33 @@
+<div>
+  <mat-form-field>
+    <mat-select placeholder="Hours" [value]="+initialHour">
+      <mat-option *ngFor="let hour of hourList" [value]="hour">
+        {{ hour }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  {{ ' ' }}
+  <mat-form-field>
+    <mat-select placeholder="Minutes" [value]="+initialMinute">
+      <mat-option *ngFor="let minute of minuteList" [value]="minute">
+        {{ minute }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  {{ ' ' }}
+  <mat-form-field>
+    <mat-select placeholder="Seconds" [value]="+initialSecond">
+      <mat-option *ngFor="let second of secondList" [value]="second">
+        {{ second }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div *ngIf="active">
+  {{ currentHour + ':' + currentMinute + ':' + currentSecond }}
+</div>
+<div>
+  <button mat-raised-button disabled>Cancel</button>
+  {{ ' ' }}
+  <button mat-raised-button (click)="onStartButtonClick()">{{ actionButtonState }}</button>
+</div>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'timer-element';
+
+  complete() {
+    alert('Timer completed');
+  }
 }

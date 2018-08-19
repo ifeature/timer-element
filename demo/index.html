@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <app-timer id="timer" hour="0" minute="0" second="3"></app-timer>
+  <script src="timer.js"></script>
+  <script>
+    const elem = document.getElementById('timer');
+    elem.addEventListener('complete', function(event) {
+      alert('completed');
+    });
+  </script>
+</body>
+</html>
